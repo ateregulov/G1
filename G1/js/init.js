@@ -100,8 +100,16 @@
     else
         renderer = new THREE.CanvasRenderer();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth , window.innerHeight - 80);
 
-    document.body.appendChild(renderer.domElement);
+    //document.body.appendChild(renderer.domElement);
+    
+    // get the DOM element to attach to
+    // - assume we've got jQuery to hand
+    var $container = $('#container');
+    var $wrap = $('#wrap');
+    //renderer.setSize($wrap.width, $wrap.height);
+    // attach the render-supplied DOM element
+    $container.append(renderer.domElement);
 
 }

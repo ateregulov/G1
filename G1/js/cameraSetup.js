@@ -9,9 +9,7 @@
         NEAR = 0.1,
         FAR = 10000;
 
-    // get the DOM element to attach to
-    // - assume we've got jQuery to hand
-    var $container = $('#container');
+
 
     // выбор рендера по наличию поддержки WebGL
     //renderer = new THREE.CanvasRenderer();
@@ -20,11 +18,11 @@
     else
         renderer = new THREE.CanvasRenderer();
 
-    var camera = new THREE.PerspectiveCamera(VIEW_ANGLE,
+    camera = new THREE.PerspectiveCamera(VIEW_ANGLE,
                                     ASPECT,
                                     NEAR,
                                     FAR);
-    var scene = new THREE.Scene();
+    scene = new THREE.Scene();
 
     // the camera starts at 0,0,0 so pull it back
     camera.position.z = 300;
@@ -32,6 +30,9 @@
     // start the renderer
     renderer.setSize(WIDTH, HEIGHT);
 
+    // get the DOM element to attach to
+    // - assume we've got jQuery to hand
+    var $container = $('#container');
     // attach the render-supplied DOM element
     $container.append(renderer.domElement);
 

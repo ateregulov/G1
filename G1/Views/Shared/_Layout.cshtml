@@ -23,24 +23,24 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div id="wrap">
-        <div class="container body-content">
-            @RenderBody()
+    @RenderBody()
+    @*<div id="wrap">
+            <div class="container body-content">
 
-        </div>
-        <div id="push"></div>
-    </div> <! -- end wrap -->
-    <footer id="footer">
+            </div>
+            <div id="push"></div>
+        </div> <! -- end wrap -->
+        <footer id="footer">
             <hr />
-            <p>&nbsp; &copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer> <!-- end footer -->
+            <p></p>
+        </footer>*@ <!-- end footer -->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
